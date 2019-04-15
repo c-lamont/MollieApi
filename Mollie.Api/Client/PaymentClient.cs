@@ -56,8 +56,5 @@ namespace Mollie.Api.Client {
 			return await this.GetListAsync<ListResponse<PaymentResponse>>($"payments", from, limit, parameters).ConfigureAwait(false);
 		}
 
-        public async Task<ListResponse<PaymentResponse>> GetCustomerPaymentListAsync(string customerId, string from = null, int? limit = null) {
-            return await this.GetListAsync<ListResponse<PaymentResponse>>($"payments/{customerId}", from, limit).ConfigureAwait(false);
-        }
     }
 }
